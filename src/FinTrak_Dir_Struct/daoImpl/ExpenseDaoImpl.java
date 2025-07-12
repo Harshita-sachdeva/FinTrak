@@ -19,7 +19,7 @@ public class ExpenseDaoImpl implements ExpenseDao {
     public boolean addExpense(Expense expense) {
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement ps = conn.prepareStatement("INSERT INTO Expense (user_id , Category , Amount , ExpenseDate , ExpenseDescription ) VALUES(?,?,?,?,?);")) {
-            System.out.println("Inserting expense for user_id = "+expense.getUser_id());
+//            System.out.println("Inserting expense for user_id = "+expense.getUser_id());
             ps.setInt(1,expense.getUser_id());
             ps.setString(2, expense.getCategory());
             ps.setDouble(3, expense.getAmount());
@@ -197,8 +197,8 @@ public class ExpenseDaoImpl implements ExpenseDao {
                         rs.getString("ExpenseDescription")
                 );
                 expenses.add(expense);
-                System.out.println("Total Expenses : " +expenses.size());
-                System.out.println();
+//                System.out.println("Total Expenses : " +expenses.size());
+//                System.out.println();
             }
         } catch (SQLException e) {
             System.out.println("Fetch Failed : " + e.getMessage());
