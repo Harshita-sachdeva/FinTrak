@@ -1,4 +1,4 @@
-# FinTrak - Personal Expense Tracker Documentation 
+# FinTrak - Personal Expense Tracker (Documentation) 
 
 ## Project Overview 
 FinTrak is a command-line based expense tracking application built in java with MySQl for database storage .It helps the users to record and analyse their daily expenses.
